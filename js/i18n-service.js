@@ -35,6 +35,30 @@ var gTrans = {
     'edit-book': {
         en: 'Edit Book',
         he: 'הוסף ספר'
+    },
+    'edit-book-name':{
+        en: 'Book Name',
+        he: 'שם הספר',
+    },
+    'edit-book-price':{
+        en: 'Book Price',
+        he: 'מחיר הספר',
+    },
+    'read-btn':{
+        en: 'Read',
+        he: 'הצג',
+    },
+    'update-btn':{
+        en: 'Update',
+        he: 'עדכן',
+    },
+    'delete-btn':{
+        en: 'Delete',
+        he: 'מחק',
+    },
+    'save-btn':{
+        en: 'Save',
+        he: 'שמור',
     }
 }
 
