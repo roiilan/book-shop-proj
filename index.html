@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
-</head>
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    </head>
 
 <body onload="onInit()">
     <header>
@@ -19,18 +20,17 @@
     </header>
 
     <header>
-        <h1 data-trans="title"></h1>
-        <!-- <h2>Create-Read-Update-Delete-List</h2> -->
+        <h1 data-trans="title"></h1>       
     </header>
 
     <ul class="book-list"></ul>
 
-         <table border="1">
+         <table border="1" class="table table-bordered table-dark mx-auto">
             <tr>
-                <th data-trans="th-id"></th>
-                <th data-trans="th-book-name"></th>
-                <th data-trans="th-price"></th>
-                <th data-trans="th-actions"></th>
+                <th scope="col" data-trans="th-id"></th>
+                <th scope="col" data-trans="th-book-name"></th>
+                <th scope="col" data-trans="th-price"></th>
+                <th scope="col" data-trans="th-actions"></th>
               </tr>
               <tbody class="book-table">
             </tbody>
@@ -61,6 +61,9 @@
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid vero, mollitia porro eveniet repellat repellendus nulla natus laudantium laboriosam molestiae at reprehenderit, quod qui perferendis exercitationem. Unde consequuntur tempore ipsa?
     </section>
     
+
+
+      
 
     <script src="js/i18n-service.js"></script>
     <script src="js/storage-service.js"></script>

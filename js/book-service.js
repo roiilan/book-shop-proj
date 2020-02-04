@@ -51,7 +51,6 @@ function changePage(diff) {
 
     if (gCurrPage > lastPage) gCurrPage = 1;
     else if (gCurrPage < 1) gCurrPage = lastPage;
-
 }
 
 function changeRate(diff,bookId) {

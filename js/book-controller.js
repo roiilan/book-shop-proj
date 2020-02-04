@@ -21,13 +21,6 @@ function renderbooks() {
         </td>
       </tr> 
       `;
-        // `<li class="${className}">
-        //     <h3>${book.name}</h3>
-        //     <h4>price: ${book.price} $ </h4>
-        //     <button onclick="onRemovebook(event, ${book.id})">x</button>
-        //     <button title="Edit book" onclick="onEditbook(event, ${book.id})">✐</button>
-        //     <button title="book Details" onclick="onShowbookDetails(event, ${book.id})">🔍</button>
-        // </li>`
     })
     var elbookList = document.querySelector('.book-table');
     elbookList.innerHTML = strHTMLs.join('');
@@ -76,11 +69,12 @@ function onSavebook() {
     elTxtname.dataset.id = '';
     elTxtprice.value = '';
     renderbooks();
+    doTrans();
 }
 
-function onShowbookDetails(event, bookId) {   
+function onShowbookDetails(event, bookId) {
     var book = getbook(bookId);
-    var elModal = document.querySelector('.modal');   
+    var elModal = document.querySelector('.modal');
     elModal.querySelector('h3').innerText = book.name;
     elModal.querySelector('.modal-price').innerText = `: ${book.price} $`;
     elModal.querySelector('.rate').innerHTML = `<button onclick="onChangeRate(-1,${bookId})">-</button>
@@ -96,16 +90,17 @@ function onCloseModal() {
 }
 
 function onChangePage(diff) {
-    changePage(diff)
+    changePage(diff);
     renderbooks();
+    doTrans();
 }
 
-function onChangeRate(diff, bookId) {  
+function onChangeRate(diff, bookId) {
     changeRate(diff, bookId);
     renderBookRate(bookId);
 }
 
-function renderBookRate(bookId){
+function renderBookRate(bookId) {
     var book = getbook(bookId);
     var elModal = document.querySelector('.modal');
     elModal.querySelector('.rate').innerHTML = `<button onclick="onChangeRate(-1,${bookId})">-</button>
