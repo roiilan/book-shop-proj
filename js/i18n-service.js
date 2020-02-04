@@ -59,6 +59,18 @@ var gTrans = {
     'save-btn':{
         en: 'Save',
         he: 'שמור',
+    },
+    'price':{
+        en: 'price',
+        he: 'מחיר',
+    },
+    'book-details':{
+        en: 'Book Details',
+        he: 'פרטים נוספים',
+    },
+    'rate':{
+        en: 'Rate ',
+        he: 'דירוג ',
     }
 }
 

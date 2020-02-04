@@ -78,19 +78,18 @@ function onSavebook() {
     renderbooks();
 }
 
-function onShowbookDetails(event, bookId) {
-    // debugger;
+function onShowbookDetails(event, bookId) {   
     var book = getbook(bookId);
-    var elModal = document.querySelector('.modal');
-    // var elRate= document.querySelector('.rate');
+    var elModal = document.querySelector('.modal');   
     elModal.querySelector('h3').innerText = book.name;
-    elModal.querySelector('h4').innerText = `price: ${book.price} $`;
-    elModal.querySelector('.rate').innerHTML = `Rate: <button onclick="onChangeRate(-1,${bookId})">-</button>
+    elModal.querySelector('.modal-price').innerText = `: ${book.price} $`;
+    elModal.querySelector('.rate').innerHTML = `<button onclick="onChangeRate(-1,${bookId})">-</button>
      ${book.rate}       
     <button onclick="onChangeRate(1,${bookId})">+</button>`;
     elModal.querySelector('p').innerHTML = `<img src="${book.imgUrl}" alt="book picture" style="width:auto;">`;
     elModal.hidden = false;
 }
+
 
 function onCloseModal() {
     document.querySelector('.modal').hidden = true;
@@ -101,8 +100,7 @@ function onChangePage(diff) {
     renderbooks();
 }
 
-function onChangeRate(diff, bookId) {
-    console.log('onChange');
+function onChangeRate(diff, bookId) {  
     changeRate(diff, bookId);
     renderBookRate(bookId);
 }
@@ -110,7 +108,7 @@ function onChangeRate(diff, bookId) {
 function renderBookRate(bookId){
     var book = getbook(bookId);
     var elModal = document.querySelector('.modal');
-    elModal.querySelector('.rate').innerHTML = `Rate: <button onclick="onChangeRate(-1,${bookId})">-</button>
+    elModal.querySelector('.rate').innerHTML = `<button onclick="onChangeRate(-1,${bookId})">-</button>
      ${book.rate}       
     <button onclick="onChangeRate(1,${bookId})">+</button>`;
 }
@@ -124,7 +122,6 @@ function onSetLang(lang) {
     } else {
         document.body.classList.remove('rtl');
     }
-
     doTrans();
     render();
 }

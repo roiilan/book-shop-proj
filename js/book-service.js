@@ -28,10 +28,7 @@ function removebook(bookId) {
 }
 
 function getbook(bookId) {
-    return gbooks.find(book => book.id === bookId)
-    // return gbooks.find(function(book){
-    //     return (book.id === bookId)
-    // })
+    return gbooks.find(book => book.id === bookId)  
 }
 
 
@@ -42,8 +39,9 @@ function addbook(name, price) {
 }
 
 function updatebook(book) {
+    console.log('update');    
     var idx = gbooks.findIndex(currbook => currbook.id === book.id)
-    gbooks[idx] = book;
+    gbooks[idx] = book;    
     saveToStorage(KEY, gbooks);
 }
 
@@ -58,7 +56,9 @@ function changePage(diff) {
 
 function changeRate(diff,bookId) {
     var book = getbook(bookId);
+    if(book.rate+diff===-1||book.rate+diff===11)return;
     book.rate+=diff;
+    updatebook(book);
 }
 
 
