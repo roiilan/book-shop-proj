@@ -4,6 +4,15 @@ body {
     padding: 10px;
 }
 
+
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .btn-delete {
+    float: left;
+} 
+
 table{
     margin: 30px;
 }

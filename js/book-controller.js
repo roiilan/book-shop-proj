@@ -2,6 +2,7 @@
 
 function onInit() {
     renderbooks();
+    doTrans();
 }
 
 function renderbooks() {
@@ -112,4 +113,18 @@ function renderBookRate(bookId){
     elModal.querySelector('.rate').innerHTML = `Rate: <button onclick="onChangeRate(-1,${bookId})">-</button>
      ${book.rate}       
     <button onclick="onChangeRate(1,${bookId})">+</button>`;
+}
+
+
+function onSetLang(lang) {
+    setLang(lang);
+    // TODO: if lang is hebrew add RTL class
+    if (lang === 'he') {
+        document.body.classList.add('rtl');
+    } else {
+        document.body.classList.remove('rtl');
+    }
+
+    doTrans();
+    render();
 }

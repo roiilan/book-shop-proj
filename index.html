@@ -11,28 +11,36 @@
 
 <body onload="onInit()">
     <header>
-        <h1>Book Shop</h1>
-        <h2>Create-Read-Update-Delete-List</h2>
+            <select onchange="onSetLang(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+            <!-- <option value="es">Spanish</option> -->
+        </select>
+    </header>
+
+    <header>
+        <h1 data-trans="title"></h1>
+        <!-- <h2>Create-Read-Update-Delete-List</h2> -->
     </header>
 
     <ul class="book-list"></ul>
 
          <table border="1">
             <tr>
-                <th>id</th>
-                <th>Title</th>
-                <th>Price</th>
-                <th>Actions</th>
+                <th data-trans="th-id"></th>
+                <th data-trans="th-book-name"></th>
+                <th data-trans="th-price"></th>
+                <th data-trans="th-actions"></th>
               </tr>
               <tbody class="book-table">
             </tbody>
         </table>
 
-    <button onclick="onChangePage(-1)">Prev Page</button>
-    <button onclick="onChangePage(1)">Next Page</button>
+    <button onclick="onChangePage(-1)" data-trans="prev-page"></button>
+    <button onclick="onChangePage(1)" data-trans="next-page"></button>
 
     <section class="book-edit">
-        <h2>Edit book</h2>
+        <h2 data-trans="edit-book"></h2>
         <input placeholder="book name" type="text" class="txt-name" data-id="" />
         <input placeholder="book price" type="text" class="txt-price" />
         <button onclick="onSavebook()">Save</button>
@@ -55,7 +63,7 @@
     </section>
     
 
-    <!-- <script src="js/demo-variadic-functions.js"></script> -->
+    <script src="js/i18n-service.js"></script>
     <script src="js/storage-service.js"></script>
     <script src="js/book-service.js"></script>
     <script src="js/book-controller.js"></script>
