@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <header>
+        <h1>Book Shop</h1>
+        <h2>Create-Read-Update-Delete-List</h2>
+    </header>
+
+    <ul class="book-list"></ul>
+
+         <table border="1">
+            <tr>
+                <th>id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Actions</th>
+              </tr>
+              <tbody class="book-table">
+            </tbody>
+        </table>
+
+    <button onclick="onChangePage(-1)">Prev Page</button>
+    <button onclick="onChangePage(1)">Next Page</button>
+
+    <section class="book-edit">
+        <h2>Edit book</h2>
+        <input placeholder="book name" type="text" class="txt-name" data-id="" />
+        <input placeholder="book price" type="text" class="txt-price" />
+        <button onclick="onSavebook()">Save</button>
+    </section>
+
+    <section class="modal" hidden>
+        <button onclick="onCloseModal()">x</button>
+        <h2>book Details</h2>
+        <div class="rate"></div>
+        <h3></h3>
+        <p></p>
+        <h4></h4>
+
+    </section>
+
+
+    <section>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo voluptates ducimus fuga deleniti accusamus, sapiente harum praesentium itaque quam reprehenderit. Quae ullam non et hic deserunt possimus iure enim porro.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid vero, mollitia porro eveniet repellat repellendus nulla natus laudantium laboriosam molestiae at reprehenderit, quod qui perferendis exercitationem. Unde consequuntur tempore ipsa?
+    </section>
+    
+
+    <!-- <script src="js/demo-variadic-functions.js"></script> -->
+    <script src="js/storage-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>

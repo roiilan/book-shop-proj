@@ -1,0 +1,70 @@
+body {
+    background-color: lightseagreen;
+    color: white;
+    padding: 10px;
+}
+
+table{
+    margin: 30px;
+}
+
+
+td {
+    min-width: 200px ;
+    height: 100px ;
+    text-align: center;
+    font-size: 1.3rem;
+} 
+
+.book-list li{
+    display: inline-block;
+    background-color: lightblue;
+    padding: 20px;
+    margin: 2px;
+}
+
+input {
+    transition: 0.3s;
+}
+
+input:focus {
+    background-color: lightcyan;
+}
+
+.book-edit {
+    background-color: lightsteelblue;
+    padding: 10px;
+}
+
+.modal {
+    background-color: mediumblue;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    width: 80%;
+}
+
+footer {
+    background-color: darkblue;
+    padding: 10px;
+    color: lightgray;
+}
+
+
+
+footer a {
+    color: #ff0000;
+    color:rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: gold;
+    text-decoration: underline;
+}
+
+header img {
+    width: 200px;
+    float: right;
+}
